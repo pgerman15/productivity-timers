@@ -21,12 +21,10 @@ function App() {
   });
 
   useEffect(() => {
-    console.log('Seconds: ', seconds);
     setCurrentTime(moment());
   }, [seconds]);
 
   const createTimer = (timerId, timerMinutes, message) => {
-    console.log(`Starting timer: ${timerId}`);
     setTimers((currentTimers) => ({
       ...currentTimers,
       [timerId]: {
